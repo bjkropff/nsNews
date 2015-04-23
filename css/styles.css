@@ -5,3 +5,14 @@
   height: 300px;
   margin-top: 30px;
 }
+
+.forum {
+  background-color: #F5F5DC;
+  height: 100px;
+  width: 400px;
+  border: 1px solid #ccc;
+}
+
+.unbulleted {
+  list-style: none;
+}

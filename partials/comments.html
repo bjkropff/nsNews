@@ -1,18 +1,25 @@
 
 
 <div class="row">
-  <div class="col-md-8" ng-show="topic.comments.length">
-    <h2>Comments for {{ topic.title }}</h2>
-    <ul>
-      <li ng-repeat="item in topic.comments">
-        {{ item.subject }}
-      </li>
-    </ul>
+
+  <div class="col-md-8" >
+    <h2>{{ topic.title}}</h2>
+      <h4>{{ topic.description}}</h4>
+      <div ng-show="topic.comments.length">
+        <h3>Comments for {{ topic.title }}</h3>
+        <div>
+          <ul>
+            <li class="unbulleted forum form-control" ng-repeat="item in topic.comments">
+              {{ item.subject }}
+            </li>
+          </ul>
+        </div>
+      </div>
   </div>
 
   <div class="col-md-4">
     <h2>Add a comment to {{ topic.title }}</h2>
-    <form ng-submit="addComment()" class="form-inline" role="form">
+    <form ng-submit="addComment()" role="form">
       <div class="form-group">
         <input type="text" ng-model="commentSubject" class="form-control" placeholder="Enter your comment">
       </div>
